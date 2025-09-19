@@ -19,4 +19,5 @@ This is my submission for HW2 Formatting Basic Email with HTML and CSS assignmen
 
 ## Hosting
 
-This site is hosted on GitHub ().
+
+This site is hosted on GitHub (https://j378463.github.io/hw2-formatting-basic-email-with-html-and-css9483674283464372/).
