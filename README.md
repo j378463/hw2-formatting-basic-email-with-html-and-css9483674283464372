@@ -14,12 +14,13 @@ This is my submission for HW2 Formatting Basic Email with HTML and CSS assignmen
 
 ## Files
 - `index.html`
-- `images/screenshot.png`
+- `images/Screenshot2.png`
 - `README.md`
 
 ## Hosting
 
 
 This site is hosted on GitHub (https://j378463.github.io/hw2-formatting-basic-email-with-html-and-css9483674283464372/).
+
 
 
