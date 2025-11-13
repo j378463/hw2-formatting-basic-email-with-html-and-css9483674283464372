@@ -2,8 +2,11 @@
 <html lang="en">
 <head>
     <title>CSUN HW2 Email Campaign</title>
+    <!-- Ensures proper character encoding for emails across clients -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Enables responsive design in mobile email clients -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Forces Internet Explorer to use the latest rendering engine -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <style type="text/css">
         /* CLIENT-SPECIFIC STYLES */
@@ -49,6 +52,7 @@
 </head>
 <body id="body" style="margin: 0 !important; padding: 0 !important; background-color: #f4f4f4; font-family: Arial, sans-serif;">
 <!-- Main container -->
+<!-- 600px max-width is standard for email templates to fit most inboxes -->
 <div style="max-width: 600px; margin: 20px auto; background-color: #ffffff; padding: 20px;">
     <!-- Logo image -->
     <div style="text-align: center; padding: 10px 0;">
@@ -62,6 +66,7 @@
 
     <!-- Hero Image -->
     <div style="text-align: center; padding: 10px 0;">
+        <!-- Using relative path; ensure 'images/Screenshot2.png' exists in project -->
         <img src="images/Screenshot2.png" alt="CSUN Campaign Image" style="max-width: 100%; height: auto;">
     </div>
 
@@ -79,6 +84,7 @@
     </div>
 
     <!-- Button -->
+    <!-- Inline styles critical for email clients; no external CSS support -->
     <div style="text-align: center; padding: 20px;">
         <a href="https://www.csun.edu" style="background-color: #d9232e; color: #ffffff; padding: 12px 24px; text-decoration: none; font-size: 16px; border-radius: 5px; display: inline-block;">Learn More About CSUN</a>
     </div>
@@ -86,6 +92,7 @@
     <!-- Footer information -->
     <div style="text-align: center; padding: 20px; font-size: 12px; color: #777777;">
         <p>Created for HW2, September 2025</p>
+        <!-- Unsubscribe link is required by CAN-SPAM for compliance -->
         <p><a href="#" style="color: #777777; text-decoration: underline;">Unsubscribe</a> | CSUN, 18111 Nordhoff St, Northridge, CA 91330</p>
     </div>
 </div>
