@@ -9,17 +9,32 @@
     <!-- Forces Internet Explorer to use the latest rendering engine -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <style type="text/css">
-        /* CLIENT-SPECIFIC STYLES */
+        /* 
+            Default mobile text scaling fixes.
+            Prevents email apps from enlarging font sizes unpredictably.
+        */
         body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+                /* 
+            Prevents Outlook from adding unwanted spacing around tables.
+            Outlook uses Word as its rendering engine, so these hacks are essential.
+        */
         table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+        
+        /* Smoother image scaling in older Microsoft clients */    
         img { -ms-interpolation-mode: bicubic; }
 
-        /* RESET STYLES */
+        /* 
+            Reset styles: remove borders, fix alignment,
+            and ensure consistent rendering across Gmail, Outlook, Yahoo, etc.
+        */
         img { border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
         table { border-collapse: collapse !important; }
         body { height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important; }
 
-        /* iOS BLUE LINKS */
+        /* 
+            iOS automatically turns phone numbers & dates into blue links.
+            This block prevents that forced styling.
+        */
         a[x-apple-data-detectors] {
             color: inherit !important;
             text-decoration: none !important;
@@ -29,7 +44,7 @@
             line-height: inherit !important;
         }
 
-        /* GMAIL BLUE LINKS */
+        /* Gmail also applies its own blue link styling so this prevents that */
         u + #body a {
             color: inherit;
             text-decoration: none;
@@ -39,7 +54,7 @@
             line-height: inherit;
         }
 
-        /* SAMSUNG MAIL BLUE LINKS */
+        /* Samsung mail clients apply link color overrides unless this rule is used */
         #MessageViewBody a {
             color: inherit;
             text-decoration: none;
@@ -54,7 +69,10 @@
 <!-- Main container -->
 <!-- 600px max-width is standard for email templates to fit most inboxes -->
 <div style="max-width: 600px; margin: 20px auto; background-color: #ffffff; padding: 20px;">
-    <!-- Logo image -->
+    <!-- 
+        Logo placeholder.
+        Centering this element creates a professional header similar to real marketing emails.
+    -->
     <div style="text-align: center; padding: 10px 0;">
         <img src="https://firstbenefits.org/wp-content/uploads/2017/10/placeholder-1024x1024.png" alt="Placeholder Logo" style="max-width: 150px; height: auto;">
     </div>
@@ -70,7 +88,10 @@
         <img src="images/Screenshot2.png" alt="CSUN Campaign Image" style="max-width: 100%; height: auto;">
     </div>
 
-    <!-- Body copy -->
+    <!-- 
+        Main body text section.
+        Padding provides visual breathing room and improves readability.
+    -->
     <div style="padding: 20px; color: #555555; font-size: 16px; line-height: 1.5;">
         <h2 style="font-size: 20px; color: #333333; margin-top: 0;">Stay Connected with CSUN</h2>
         <p>
@@ -83,16 +104,20 @@
         </p>
     </div>
 
-    <!-- Button -->
-    <!-- Inline styles critical for email clients; no external CSS support -->
+    <!-- 
+        Primary call-to-action (CTA) button.
+        Buttons in HTML emails must always use inline CSS to stay compatible with Outlook.
+    -->
     <div style="text-align: center; padding: 20px;">
         <a href="https://www.csun.edu" style="background-color: #d9232e; color: #ffffff; padding: 12px 24px; text-decoration: none; font-size: 16px; border-radius: 5px; display: inline-block;">Learn More About CSUN</a>
     </div>
 
-    <!-- Footer information -->
+    <!-- 
+        Footer includes required legal info and an unsubscribe link (CAN-SPAM compliance).
+        Small font size communicates that this section is non-primary content.
+    -->
     <div style="text-align: center; padding: 20px; font-size: 12px; color: #777777;">
         <p>Created for HW2, September 2025</p>
-        <!-- Unsubscribe link is required by CAN-SPAM for compliance -->
         <p><a href="#" style="color: #777777; text-decoration: underline;">Unsubscribe</a> | CSUN, 18111 Nordhoff St, Northridge, CA 91330</p>
     </div>
 </div>
